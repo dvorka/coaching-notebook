@@ -1,0 +1,87 @@
+/* MindForger help CSS */
+
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Cambria,Georgia,Myriad Pro,Arial,Helvetica;
+	font-size: 100%;
+	background: #fff;
+}
+
+a:link {text-decoration: none; color: black; border-bottom: 1px dotted #000;}
+a:visited {text-decoration: none; color: black; border-bottom: 1px dotted #000;}
+a:active {text-decoration: none; color: black; border-bottom: 1px dotted #000;}
+a:hover {text-decoration: none; color: black; border-bottom: 1px dotted #000;}
+
+a.mf-link {
+	border-bottom: 0px none #fff;
+}
+
+.mf-button {
+	background-color: #000;
+	color: #fff;
+	font-weight: bolder;
+	white-space: pre;
+	
+	padding: 5px 10px 5px 10px;
+	margin-right: 3px;
+	border-width: 0px;	
+
+	cursor: hand;
+    cursor: pointer;
+}
+
+.mf-menuButtonOn {
+	font-weight: bold; 
+	font-size: 16px;
+	font-family: Cambria, Georgia; 
+	background-color: #eee;
+	width: 100%;
+	border-width: 0px;
+	text-align: left;
+	
+	padding-left: 7px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px; 
+	margin-bottom: 0px;
+	 
+	cursor: hand;
+    cursor: pointer;    
+}
+
+.mf-menuButtonOff {
+	text-align: left;
+	font-size: 16px;
+	font-family: Cambria, Georgia; 
+	background-color: #fff;
+	width: 100%;
+	border-width: 0px;
+	
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+	padding-left: 7px; 
+	padding-top: 0px;
+	padding-bottom: 0px;
+	
+	cursor: hand;
+    cursor: pointer;    
+}
+
+#leftMenubarContainer {
+	width: 150px;
+	
+	position: fixed;
+	top: 5.5em;	
+  	border-collapse: collapse;
+  	margin-top: 0.3em;
+  	margin-bottom: 5em;
+}
+
+
+/** EOF **/
