@@ -1,3 +1,5 @@
+.gwt/
+/.metadata/
+/.settings/
 gwt-unitCache/
 test-classes/
-.gwt/
