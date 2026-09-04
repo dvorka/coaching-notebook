@@ -8,7 +8,7 @@ Do want to start a new business, find a new partner for life, change your career
 
 How do you track progress on your goals between sessions with your life coach? Are you a professional coach? How do you interact with your clients?
 
-**CoachingNotebook** is a problem solver, ~~outliner~~ and auto-coaching notebook."
+**CoachingNotebook** is a problem solver and auto-coaching notebook.
 
 https://coaching-notebook.mindforger.com
 # G.R.O.W. Model

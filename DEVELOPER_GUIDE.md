@@ -38,7 +38,7 @@ Install **Eclipse IDE for Java Developers**:
 * menu / New / New Java Project
     - project: `coaching-notebook`
     - uncheck "Use default location"
-    - choose JDK/JRE 1.8.0 
+    - choose JDK/JRE 1.8.0
     - click `Finish` button
 * window / Package explorer (left sidebar)
     - review imported sources
@@ -51,7 +51,7 @@ What's where:
     * `src/`
 * Dependencies:
     * `war/WEB-INF/lib/*.jar`
-        - dependencies are pushed to Git 
+        - dependencies are pushed to Git
           (not nice, but handy)
 
 ### [Eclipse] build
@@ -77,5 +77,9 @@ Build, enhance and run the project:
 ```
 make run
 ```
+
+Hints:
+
+* Runs on JDK 1.7.x
 
 
