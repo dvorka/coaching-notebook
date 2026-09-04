@@ -1,4 +1,4 @@
-.PHONY: compile enhance run
+.PHONY: compile enhance run stop
 
 compile:
 	./make/compile.sh
@@ -8,3 +8,6 @@ enhance:
 
 run: compile enhance
 	./make/run.sh
+
+stop:
+	./make/stop.sh
