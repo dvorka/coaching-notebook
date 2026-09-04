@@ -44,7 +44,7 @@ Install **Eclipse IDE for Java Developers**:
     - review imported sources
 
 
-# Build
+## Build
 What's where:
 
 * Sources:
@@ -54,7 +54,7 @@ What's where:
         - dependencies are pushed to Git 
           (not nice, but handy)
 
-## [Eclipse] build
+### [Eclipse] build
 What's where:
 
 * Classpath configuration:
@@ -68,4 +68,14 @@ What's where:
     - add .jar files from war/WEB-INF/lib to ^
 * menu / Project / Clean
     - this will build the project automatically (if set as that)
+
+# CLI
+
+## Run
+Build, enhance and run the project:
+
+```
+make run
+```
+
 

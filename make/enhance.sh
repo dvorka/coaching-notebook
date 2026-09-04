@@ -21,6 +21,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR/.."
 
 SDK="${GAE_SDK_HOME:-/home/dvorka/p/openstack/kepler-64b/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8}"
+JAVA_BIN="${GAE_JAVA_HOME:-/opt/oracle/jdk1.8.0_181}/bin/java"
 ENHANCER_LIB="$SDK/lib/opt/tools/datanucleus/v1"
 CLASSES_DIR="war/WEB-INF/classes"
 LIB_DIR="war/WEB-INF/lib"
@@ -31,8 +32,14 @@ if [ ! -f "$ENHANCER_LIB/datanucleus-enhancer-1.1.4.jar" ]; then
     exit 1
 fi
 
+if [ ! -x "$JAVA_BIN" ]; then
+    echo "error: $JAVA_BIN not found - set GAE_JAVA_HOME to a JDK 8 install" >&2
+    echo "(this 2013-era DataNucleus enhancer breaks under JDK 9+'s module system)" >&2
+    exit 1
+fi
+
 if [ ! -d "$CLASSES_DIR" ]; then
-    echo "error: $CLASSES_DIR not found - build the project in Eclipse first" >&2
+    echo "error: $CLASSES_DIR not found - build the project first (make compile)" >&2
     exit 1
 fi
 
@@ -57,4 +64,4 @@ done
 [ "$missing" -eq 0 ] || { echo "error: rebuild the project first (Project > Clean in Eclipse)" >&2; exit 1; }
 
 echo "enhancing ${#PC_CLASSES[@]} persistence-capable classes..."
-java -cp "$CP" org.datanucleus.enhancer.DataNucleusEnhancer -api JDO -d "$CLASSES_DIR" -v "${PC_CLASSES[@]}"
+"$JAVA_BIN" -cp "$CP" org.datanucleus.enhancer.DataNucleusEnhancer -api JDO -d "$CLASSES_DIR" -v "${PC_CLASSES[@]}"
