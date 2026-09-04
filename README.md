@@ -1,46 +1,43 @@
 Coaching Notebook
 =================
+[![Support on Open Collective](https://img.shields.io/badge/Sponsor-Open%20Collective-blue?style=for-the-badge&logo=open-collective)](https://opencollective.com/dvorka-floss-lab)
+[![GitHub issues](https://img.shields.io/github/issues/dvorka/coaching-notebook.svg?maxAge=360)](https://github.com/dvorka/coaching-notebook/issues)
+[![License](https://img.shields.io/github/license/dvorka/coaching-notebook?color=%24fe0000)](https://github.com/dvorka/coaching-notebook/blob/master/LICENSE)
 
-Coaching notebook web applications for Google App Engine - check it live http://web.mindforger.com
+Do want to start a new business, find a new partner for life, change your career, run sub 3 hour marathon or lose 25 pounds? Any tough problem? Need to make up your mind? CoachingNotebook will help you to find the solution.
 
-<kbd>![Feature](doc/actions.png)</kbd>
+How do you track progress on your goals between sessions with your life coach? Are you a professional coach? How do you interact with your clients?
 
-<kbd>![Feature](doc/attachments.png)</kbd>
+**CoachingNotebook** is a problem solver, outliner and auto-coaching notebook."
 
-<kbd>![Feature](doc/categories.png)</kbd>
+https://coaching-notebook.mindforger.com
+# G.R.O.W. Model
+![screenshot](media/screenshots/grow.png)
 
-<kbd>![Feature](doc/connections.png)</kbd>
 
-<kbd>![Feature](doc/dashboard.png)</kbd>
+# S.M.A.R.T.E.R. Goals
+![screenshot](media/screenshots/smart.png)
 
-<kbd>![Feature](doc/eisenhower.png)</kbd>
 
-<kbd>![Feature](doc/goal-lifecycle.png)</kbd>
+# S.W.O.T. Analysis
+![screenshot](media/screenshots/swot.png)
 
-<kbd>![Feature](doc/grow.png)</kbd>
 
-<kbd>![Feature](doc/interlinking.png)</kbd>
+# Eisenhower Matrix
+![screenshot](media/screenshots/eisenhower.png)
 
-<kbd>![Feature](doc/lessons-learned.png)</kbd>
 
-<kbd>![Feature](doc/life-vision.png)</kbd>
+# Wheel of Life
+![screenshot](media/screenshots/wheel-of-life.png)
 
-<kbd>![Feature](doc/mind-forger-outline.png)</kbd>
 
-<kbd>![Feature](doc/mr-mf.png)</kbd>
+# Installation
+Build:
 
-<kbd>![Feature](doc/notifications.png)</kbd>
+* [build on Linux](DEVELOPER_GUIDE.md)
 
-<kbd>![Feature](doc/outliner-operations.png)</kbd>
 
-<kbd>![Feature](doc/profile.png)</kbd>
+# Bugs and Feature Requests
+https://github.com/dvorka/coaching-notebook/issues
 
-<kbd>![Feature](doc/sharing.png)</kbd>
 
-<kbd>![Feature](doc/smart.png)</kbd>
-
-<kbd>![Feature](doc/strategy.png)</kbd>
-
-<kbd>![Feature](doc/swot.png)</kbd>
-
-<kbd>![Feature](doc/wheel-of-life.png)</kbd>
