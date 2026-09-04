@@ -76,15 +76,25 @@ var Videobox = {
 	},
 
 	video: function(sLinkHref){
-		if (sLinkHref.match(/youtube\.com\/watch/i)) {
-      this.flash = true;
+		if (sLinkHref.match(/\.(png|jpe?g|gif)$/i)) {
+			// plain screenshot, not a video - just show the image full-size,
+			// scaled to fit without distorting its aspect ratio // dvorka
+			this.flash = false;
+			this.other = '<img src="'+sLinkHref+'" style="max-width:'+this.options.contentsWidth+
+					'px;max-height:'+this.options.contentsHeight+'px;width:auto;height:auto;" alt=""/>';
+		}
+		else if (sLinkHref.match(/youtube\.com\/watch/i)) {
+			// Flash/SWFObject is dead in every modern browser - it used to render this
+			// via a Flash <embed>, which no browser will draw anymore no matter what
+			// URL it points at. Use a real <iframe> instead, like every site does today. // dvorka
+      this.flash = false;
 			var hRef = sLinkHref;
 			var videoId = hRef.split('=');
 			this.videoID = videoId[1];
-			this.so = new SWFObject("http://www.youtube.com/v/"+this.videoID+
-					"?playlist=6FanFFgGmBk&hd=1&autoplay=1&rel=0&loop=1&autohide=1" // dvorka
-					, "flvvideo", this.options.contentsWidth, this.options.contentsHeight, "0");
-			this.so.addParam("wmode", "transparent");
+			this.other = '<iframe width="'+this.options.contentsWidth+'" height="'+this.options.contentsHeight+'" '+
+					'src="https://www.youtube.com/embed/'+this.videoID+
+					'?playlist=6FanFFgGmBk&hd=1&autoplay=1&rel=0&loop=1&autohide=1" ' + // dvorka
+					'frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
 		}
 		else if (sLinkHref.match(/metacafe\.com\/watch/i)) {
       this.flash = true;

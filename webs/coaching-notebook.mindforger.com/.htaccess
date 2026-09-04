@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Apache's automatic directory redirect for a bare "/docs" request (no
+  # trailing slash) has no .html extension, so it bypasses the FilesMatch
+  # block below entirely and goes out with zero cache directives - browsers
+  # then cache that bare 301 indefinitely, which is why /docs looked stale
+  # without a hard refresh. It also downgraded to plain http://. Own the
+  # redirect ourselves so it keeps https:// and gets tagged for no-cache.
+  RewriteRule ^docs$ https://mytral.mindforger.com/docs/ [R=301,L,E=NOCACHE:1]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Force browsers to always validate HTML files before rendering
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  # Same no-cache treatment for the /docs redirect above (tagged via the
+  # NOCACHE env var since it has no .html extension for FilesMatch to catch)
+  Header always set Cache-Control "no-cache, no-store, must-revalidate" env=NOCACHE
+  Header always set Pragma "no-cache" env=NOCACHE
+  Header always set Expires "0" env=NOCACHE
+</IfModule>
